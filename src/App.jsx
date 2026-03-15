@@ -366,7 +366,7 @@ export default function App() {
               loop={true}
               className="w-full aspect-video md:aspect-[21/9] bg-slate-900"
             >
-              {[1, 2, 3, 4].map((num) => (
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((num) => (
                 <SwiperSlide key={num}>
                   <div className="w-full h-full relative group">
                     <img
