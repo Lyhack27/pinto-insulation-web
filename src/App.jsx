@@ -4,6 +4,15 @@ import {
   Thermometer, Home, Building2, Wrench, Wind,
   ShieldCheck, CheckCircle2, ArrowRight, Sun, Snowflake, Star
 } from 'lucide-react';
+// Import Swiper React components and modules
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/effect-fade';
 
 export default function App() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -329,6 +338,47 @@ export default function App() {
                 </a>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Photo Gallery Carousel */}
+      <section id="gallery" className="py-24 px-6 md:px-12 bg-white border-t border-slate-100">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <span className="text-orange-500 font-bold tracking-wider uppercase text-sm">Recent Projects</span>
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-3 mb-6">Our Best Work</h2>
+            <div className="w-24 h-1 bg-orange-500 mx-auto rounded-full"></div>
+            <p className="text-lg text-slate-600 mt-6 max-w-2xl mx-auto">
+              Take a look at some of the pristine residential and commercial insulation jobs we've just completed around Melbourne.
+            </p>
+          </div>
+
+          <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-100">
+            <Swiper
+              modules={[Navigation, Pagination, Autoplay, EffectFade]}
+              effect="fade"
+              spaceBetween={0}
+              slidesPerView={1}
+              navigation
+              pagination={{ clickable: true, dynamicBullets: true }}
+              autoplay={{ delay: 5000, disableOnInteraction: false }}
+              loop={true}
+              className="w-full aspect-video md:aspect-[21/9] bg-slate-900"
+            >
+              {[1, 2, 3, 4].map((num) => (
+                <SwiperSlide key={num}>
+                  <div className="w-full h-full relative group">
+                    <img
+                      src={`/gallery/work-${num}.jpg`}
+                      alt={`Pinto Insulation recent installation work ${num}`}
+                      className="w-full h-full object-cover object-center transform transition-transform duration-1000 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
       </section>
