@@ -121,15 +121,19 @@ export default function App() {
         </div>
       </div>
 
+      {/* Promo Banner */}
+      <div className="bg-orange-500 text-white py-2.5 px-4 flex items-center justify-center gap-3 text-sm font-semibold">
+        <span className="bg-white text-orange-500 text-xs font-black px-2 py-0.5 rounded-full uppercase tracking-wide">Limited Offer</span>
+        <span>Get <strong>$100 AUD OFF</strong> your first insulation purchase — call us today to claim!</span>
+        <a href="#contact" onClick={e => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }} className="hidden sm:inline-block bg-white text-orange-500 text-xs font-bold px-3 py-1 rounded-full hover:bg-orange-50 transition-colors">
+          Claim Now →
+        </a>
+      </div>
+
       {/* Main Navigation */}
       <nav className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-3' : 'bg-white/95 backdrop-blur-sm py-5'} px-6 md:px-12 flex justify-between items-center`}>
-        <div className="flex items-center space-x-2">
-          <div className="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg">
-            P
-          </div>
-          <span className="text-2xl font-black tracking-tight text-slate-900 uppercase">
-            Pinto <span className="text-orange-500 font-light">Insulation</span>
-          </span>
+        <div className="flex items-center">
+          <img src="/logo.png" alt="Pinto Insulation" className="h-12 w-auto" />
         </div>
 
         {/* Desktop Links */}
@@ -485,11 +489,8 @@ export default function App() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
 
           <div>
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-8 h-8 bg-orange-500 rounded flex items-center justify-center text-white font-bold text-lg">P</div>
-              <span className="text-xl font-black tracking-tight text-white uppercase">
-                Pinto <span className="text-orange-500 font-light">Insulation</span>
-              </span>
+            <div className="mb-6">
+              <img src="/logo.png" alt="Pinto Insulation" className="h-14 w-auto brightness-0 invert" />
             </div>
             <p className="mb-6 leading-relaxed text-sm">
               Comprehensive insulation solutions for residential and commercial properties in Melbourne. We optimize your property's temperature and efficiency.
