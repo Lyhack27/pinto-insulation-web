@@ -136,6 +136,7 @@ export default function App() {
         <div className="hidden md:flex items-center space-x-8 font-medium text-slate-600">
           <a href="#home" className="hover:text-orange-500 transition-colors">Home</a>
           <a href="#about" className="hover:text-orange-500 transition-colors">About Us</a>
+          <a href="#video" className="hover:text-orange-500 transition-colors">Video</a>
           <a href="#services" className="hover:text-orange-500 transition-colors">Services</a>
           <a href="#reviews" className="hover:text-orange-500 transition-colors">Reviews</a>
           <a href="#contact" className="hover:text-orange-500 transition-colors">Contact</a>
@@ -158,6 +159,7 @@ export default function App() {
         <div className="md:hidden fixed inset-0 z-40 bg-white pt-24 px-6 flex flex-col space-y-6 text-xl font-semibold text-slate-800 h-screen">
           <a href="#home" onClick={() => setMobileMenuOpen(false)} className="border-b border-slate-100 pb-4">Home</a>
           <a href="#about" onClick={() => setMobileMenuOpen(false)} className="border-b border-slate-100 pb-4">About Us</a>
+          <a href="#video" onClick={() => setMobileMenuOpen(false)} className="border-b border-slate-100 pb-4">Video</a>
           <a href="#services" onClick={() => setMobileMenuOpen(false)} className="border-b border-slate-100 pb-4">Services</a>
           <a href="#reviews" onClick={() => setMobileMenuOpen(false)} className="border-b border-slate-100 pb-4">Reviews</a>
           <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="border-b border-slate-100 pb-4">Contact</a>
@@ -232,6 +234,51 @@ export default function App() {
           <div className="text-center">
             <div className="text-4xl font-black text-slate-900 mb-2">100<span className="text-orange-500">%</span></div>
             <div className="text-sm font-semibold text-slate-500 uppercase tracking-wide">Satisfied Clients</div>
+          </div>
+        </div>
+      </section>
+
+      {/* Promotional Video Section */}
+      <section id="video" className="py-24 px-6 md:px-12 bg-white border-t border-slate-100">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="text-orange-500 font-bold tracking-wider uppercase text-sm">See Us In Action</span>
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-3 mb-6">Watch How We Work</h2>
+            <div className="w-24 h-1 bg-orange-500 mx-auto rounded-full"></div>
+            <p className="text-lg text-slate-600 mt-6 max-w-2xl mx-auto">
+              See our professional team in action — from start to finish, we deliver clean, precise, and high-quality insulation installations.
+            </p>
+          </div>
+
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 ring-1 ring-slate-200">
+            {/* Orange top accent bar */}
+            <div className="absolute top-0 left-0 right-0 h-1 bg-orange-500 z-10"></div>
+            <video
+              controls
+              preload="metadata"
+              className="w-full aspect-video object-cover"
+              poster=""
+            >
+              <source src="/promo-video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          {/* Video CTA row */}
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="#contact"
+              className="flex items-center bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg shadow-orange-500/25 transition-all"
+            >
+              Get a Free Quote
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </a>
+            <a
+              href="#services"
+              className="flex items-center bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200 px-8 py-4 rounded-full font-bold text-lg transition-all"
+            >
+              View Our Services
+            </a>
           </div>
         </div>
       </section>
