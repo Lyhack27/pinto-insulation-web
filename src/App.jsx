@@ -238,51 +238,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* Promotional Video Section */}
-      <section id="video" className="py-24 px-6 md:px-12 bg-white border-t border-slate-100">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12">
-            <span className="text-orange-500 font-bold tracking-wider uppercase text-sm">See Us In Action</span>
-            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-3 mb-6">Watch How We Work</h2>
-            <div className="w-24 h-1 bg-orange-500 mx-auto rounded-full"></div>
-            <p className="text-lg text-slate-600 mt-6 max-w-2xl mx-auto">
-              See our professional team in action — from start to finish, we deliver clean, precise, and high-quality insulation installations.
-            </p>
-          </div>
-
-          <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 ring-1 ring-slate-200">
-            {/* Orange top accent bar */}
-            <div className="absolute top-0 left-0 right-0 h-1 bg-orange-500 z-10"></div>
-            <video
-              controls
-              preload="metadata"
-              className="w-full aspect-video object-cover"
-              poster=""
-            >
-              <source src="/promo-video.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-
-          {/* Video CTA row */}
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="#contact"
-              className="flex items-center bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg shadow-orange-500/25 transition-all"
-            >
-              Get a Free Quote
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </a>
-            <a
-              href="#services"
-              className="flex items-center bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200 px-8 py-4 rounded-full font-bold text-lg transition-all"
-            >
-              View Our Services
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* About / Why Choose Us */}
       <section id="about" className="py-24 px-6 md:px-12 bg-slate-50">
         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-16">
@@ -385,6 +340,48 @@ export default function App() {
                 </a>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Promotional Video Section */}
+      <section id="video" className="py-16 px-6 md:px-12 bg-slate-50 border-t border-slate-100">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-8">
+            <span className="text-orange-500 font-semibold tracking-wider uppercase text-xs">See Us In Action</span>
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mt-2 mb-3">Watch How We Work</h2>
+            <p className="text-slate-500 max-w-xl mx-auto text-sm leading-relaxed">
+              See our team in action — clean, precise, and professional insulation installations from start to finish.
+            </p>
+          </div>
+
+          <div className="rounded-xl overflow-hidden shadow-md border border-slate-200 bg-slate-900">
+            <video
+              controls
+              preload="metadata"
+              className="w-full aspect-video object-cover"
+            >
+              <source src="/promo-video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
+            <a
+              href="#contact"
+              onClick={e => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}
+              className="flex items-center bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-semibold text-sm shadow-md shadow-orange-500/20 transition-all"
+            >
+              Get a Free Quote
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </a>
+            <a
+              href="#services"
+              onClick={e => { e.preventDefault(); document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' }); }}
+              className="flex items-center bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 px-6 py-3 rounded-full font-semibold text-sm transition-all"
+            >
+              View Our Services
+            </a>
           </div>
         </div>
       </section>
