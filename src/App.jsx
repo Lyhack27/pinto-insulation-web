@@ -133,7 +133,7 @@ export default function App() {
       {/* Main Navigation */}
       <nav className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-3' : 'bg-white/95 backdrop-blur-sm py-5'} px-6 md:px-12 flex justify-between items-center`}>
         <div className="flex items-center">
-          <img src="/logo.png" alt="Pinto Insulation" className="h-16 w-auto" />
+          <img src="/logo.png" alt="Pinto Insulation" className="h-24 w-auto" />
         </div>
 
         {/* Desktop Links */}
@@ -490,7 +490,7 @@ export default function App() {
 
           <div>
             <div className="mb-6">
-              <img src="/logo.png" alt="Pinto Insulation" className="h-14 w-auto brightness-0 invert" />
+              <img src="/logo.png" alt="Pinto Insulation" className="h-20 w-auto brightness-0 invert" />
             </div>
             <p className="mb-6 leading-relaxed text-sm">
               Comprehensive insulation solutions for residential and commercial properties in Melbourne. We optimize your property's temperature and efficiency.
