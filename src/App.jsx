@@ -188,11 +188,11 @@ export default function App() {
               We provide comprehensive solutions and support to improve your property's energy efficiency, reduce costs, and ensure year-round comfort.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-              <button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg shadow-orange-500/25 transition-all flex items-center justify-center group">
+              <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg shadow-orange-500/25 transition-all flex items-center justify-center group">
                 Get a Free Quote
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-8 py-4 rounded-full font-bold text-lg backdrop-blur-sm transition-all flex items-center justify-center">
+              <button onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })} className="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-8 py-4 rounded-full font-bold text-lg backdrop-blur-sm transition-all flex items-center justify-center">
                 View Our Services
               </button>
             </div>
@@ -300,13 +300,12 @@ export default function App() {
 
           <div className="w-full lg:w-1/2 relative">
             <div className="aspect-square rounded-full bg-orange-500/10 absolute -inset-4 blur-3xl -z-10"></div>
-            <div className="w-full h-[600px] rounded-3xl overflow-hidden shadow-2xl relative bg-slate-800 flex items-center justify-center border-4 border-white">
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent z-10"></div>
-              <div className="text-center z-20 p-8 border-2 border-dashed border-white/20 rounded-xl bg-black/20 backdrop-blur-sm">
-                <Home className="w-16 h-16 text-white/50 mx-auto mb-4" />
-                <p className="text-white/80 font-medium"></p>
-              </div>
-
+            <div className="w-full rounded-3xl overflow-hidden shadow-2xl relative border-4 border-white">
+              <img
+                src="/eco-friendly.png"
+                alt="Eco-friendly insulation cross-section"
+                className="w-full h-full object-cover"
+              />
               <div className="absolute bottom-8 left-8 z-20 bg-white px-6 py-4 rounded-xl shadow-xl">
                 <p className="font-bold text-slate-900">Eco-Friendly Materials</p>
                 <p className="text-sm text-slate-500">Certified by Australian Standards</p>
@@ -349,7 +348,7 @@ export default function App() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8">
             <span className="text-orange-500 font-semibold tracking-wider uppercase text-xs">See Us In Action</span>
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mt-2 mb-3">Watch How We Work</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mt-2 mb-3">Our Installation Process</h2>
             <p className="text-slate-500 max-w-xl mx-auto text-sm leading-relaxed">
               See our team in action — clean, precise, and professional insulation installations from start to finish.
             </p>
