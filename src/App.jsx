@@ -133,7 +133,7 @@ export default function App() {
       {/* Main Navigation */}
       <nav className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-3' : 'bg-white/95 backdrop-blur-sm py-5'} px-6 md:px-12 flex justify-between items-center`}>
         <div className="flex items-center">
-          <img src="/logo.png" alt="Pinto Insulation" className="h-12 w-auto" style={{mixBlendMode: 'multiply'}} />
+          <img src="/logo.png" alt="Pinto Insulation" className="h-16 w-auto" />
         </div>
 
         {/* Desktop Links */}
